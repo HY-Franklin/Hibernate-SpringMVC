@@ -1,5 +1,7 @@
 package com.hibernatedemo;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name="first_name")
+    @NotNull
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
